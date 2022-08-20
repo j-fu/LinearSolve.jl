@@ -9,6 +9,7 @@ on:
       - try-ci
 jobs:
   test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.group }} - ${{ github.event_name }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -17,13 +18,13 @@ jobs:
           - Core
 #          - LinearSolvePardiso
         version:
-          - '1.6'
-          - '1'
-          - 'nightly'
-         os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
+           - '1.6'
+           - '1'
+           - 'nightly'
+        os:
+           - ubuntu-latest
+           - macos-latest
+           - windows-latest
    steps:
       - uses: actions/checkout@v2
       - uses: julia-actions/setup-julia@v1
