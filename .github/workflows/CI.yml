@@ -16,7 +16,7 @@ jobs:
       matrix:
         group:
           - Core
-#          - LinearSolvePardiso
+          - LinearSolvePardiso
         version:
            - '1.6'
            - '1'
