@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - try-ci
+      - main
 jobs:
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.group }} - ${{ github.event_name }}
@@ -15,7 +16,6 @@ jobs:
       matrix:
         group:
           - Core
-#          - LinearSolvePardiso
         version:
            - '1.6'
            - '1'
